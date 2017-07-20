@@ -1,0 +1,24 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ezartech.demo.ezarcompass"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.ezartech.demo.ezarcompass"
+        },
+        "com.ezartech.ezar.videooverlay": {
+            "PACKAGE_NAME": "com.ezartech.demo.ezarcompass"
+        },
+        "com.ezartech.ezar.snapshot": {
+            "PACKAGE_NAME": "com.ezartech.demo.ezarcompass"
+        }
+    },
+    "dependent_plugins": {}
+}

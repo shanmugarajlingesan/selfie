@@ -1,0 +1,133 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Compass\"><param name=\"android-package\" value=\"org.apache.cordova.deviceorientation.CompassListener\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"videoOverlay\"><param name=\"android-package\" value=\"com.ezartech.ezar.videooverlay.VideoOverlayPlugin\" /><param name=\"onload\" value=\"false\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"snapshot\"><param name=\"android-package\" value=\"com.ezartech.ezar.snapshot.Snapshot\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.camera.any\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.camera.autofocus\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ezartech.demo.ezarcompass"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.ezartech.demo.ezarcompass"
+        },
+        "com.ezartech.ezar.videooverlay": {
+            "PACKAGE_NAME": "com.ezartech.demo.ezarcompass"
+        },
+        "com.ezartech.ezar.snapshot": {
+            "PACKAGE_NAME": "com.ezartech.demo.ezarcompass"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-device-orientation.CompassError",
+            "file": "plugins/cordova-plugin-device-orientation/www/CompassError.js",
+            "pluginId": "cordova-plugin-device-orientation",
+            "clobbers": [
+                "CompassError"
+            ]
+        },
+        {
+            "id": "cordova-plugin-device-orientation.CompassHeading",
+            "file": "plugins/cordova-plugin-device-orientation/www/CompassHeading.js",
+            "pluginId": "cordova-plugin-device-orientation",
+            "clobbers": [
+                "CompassHeading"
+            ]
+        },
+        {
+            "id": "cordova-plugin-device-orientation.compass",
+            "file": "plugins/cordova-plugin-device-orientation/www/compass.js",
+            "pluginId": "cordova-plugin-device-orientation",
+            "clobbers": [
+                "navigator.compass"
+            ]
+        },
+        {
+            "id": "com.ezartech.ezar.videooverlay.videoOverlay",
+            "file": "plugins/com.ezartech.ezar.videooverlay/www/videoOverlay.js",
+            "pluginId": "com.ezartech.ezar.videooverlay",
+            "merges": [
+                "ezar"
+            ]
+        },
+        {
+            "id": "com.ezartech.ezar.videooverlay.camera",
+            "file": "plugins/com.ezartech.ezar.videooverlay/www/camera.js",
+            "pluginId": "com.ezartech.ezar.videooverlay",
+            "clobbers": [
+                "camera"
+            ]
+        },
+        {
+            "id": "com.ezartech.ezar.snapshot.snapshot",
+            "file": "plugins/com.ezartech.ezar.snapshot/www/snapshot.js",
+            "pluginId": "com.ezartech.ezar.snapshot",
+            "merges": [
+                "ezar"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.3.2",
+        "cordova-plugin-device-orientation": "1.0.7",
+        "com.ezartech.ezar.videooverlay": "0.2.11",
+        "com.ezartech.ezar.snapshot": "0.2.7"
+    }
+}
